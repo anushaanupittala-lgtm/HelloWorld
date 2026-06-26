@@ -3,7 +3,8 @@ name: Daily Python Job
 on:
   schedule:
     - cron: '15 12 * * *'
-   workflow_dispatch: {}
+  workflow_dispatch:
+
 jobs:
   run-script:
     runs-on: ubuntu-latest
@@ -14,5 +15,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
       - name: Run script
         run: python hello.py
