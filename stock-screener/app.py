@@ -4,6 +4,9 @@ import pandas as pd
 
 from screener import check_stock
 from config import STOCKS
+from email_sender import send_email
+
+send_email(signals)
 
 signals = []
 
